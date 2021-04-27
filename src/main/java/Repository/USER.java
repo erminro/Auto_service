@@ -1,4 +1,4 @@
-package User;
+package Repository;
 
 public class USER {
 }

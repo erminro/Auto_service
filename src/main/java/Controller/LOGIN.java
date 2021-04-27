@@ -1,4 +1,4 @@
-package Login;
+package Controller;
 
 public class LOGIN {
 }
