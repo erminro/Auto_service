@@ -1,6 +1,6 @@
-package Appmain;
+package appmain;
 
-public class APPMAIN {
+public class AppMain {
     public static void main(String[] args) {
 
     }
