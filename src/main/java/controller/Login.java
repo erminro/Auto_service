@@ -30,24 +30,29 @@ public class Login {
         String password = this.passswordField.getText();
         //trimit datele la service
         AbstractUser abstractUser = this.service.getUserByUsername(username);
-        if(abstractUser != null){
-            if(password.hashCode()==abstractUser.getHashing()) {
-                if (abstractUser instanceof User) {
-                    //
+        if(username==""|| password=="") {
+            if (abstractUser != null) {
+                if (password.hashCode() == abstractUser.getHashing()) {
+                    if (abstractUser instanceof User) {
+                        //
 
-                } else if (abstractUser instanceof AutoService) {
-                    //
+                    } else if (abstractUser instanceof AutoService) {
+                        //
+                    }
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Wrong password!");
+                    alert.setContentText("Wrong password!");
+                    alert.showAndWait();
                 }
-            }
-            else{
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Wrong password!");
-                alert.setContentText("Wrong password!");
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Wrong username!");
                 alert.showAndWait();
             }
-        }
-        else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION,"Wrong username!");
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Empty fields (all fields must be completed)!");
+            alert.setContentText("Empty fields (all fields must be completed!");
             alert.showAndWait();
         }
     }
