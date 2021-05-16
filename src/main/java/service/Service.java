@@ -22,6 +22,9 @@ public class Service {
     public List<Appointment> getAllAutoAppointments(String username){
         return this.repoappointments.getAllAutoAppointments(username);
     }
+    public List<Appointment> getAllAutoAppointmentsbyserviceusername(String usernameservice){
+        return this.repoappointments.getAllAutoAppointmentsbyserviceusername(usernameservice);
+    }
     public void addAppointment(Appointment appointment){
         this.repoappointments.addAppointment(appointment);
     }

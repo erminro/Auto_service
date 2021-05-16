@@ -51,6 +51,23 @@ public class RepoDbAppointments {
         }
         return appointmentservice;
     }
+    public List<Appointment> getAllAutoAppointmentsbyserviceusername(String usernameservice)
+    {
+        this.initialize();
+        List<Appointment> appointmentservice = null;
+        try(Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            Query query = session.createQuery("from Appointment where usernameservice=:usernameservice");
+            query.setParameter("usernameservice",usernameservice);
+            appointmentservice = query.getResultList();
+            session.getTransaction().commit();
+            this.close();
+        }
+        catch (Exception e){
+            this.close();
+        }
+        return appointmentservice;
+    }
     public List<Appointment> getAllAutoAppointmentsbyusernameandstatus(String username,String situation)
     {
         this.initialize();
@@ -69,6 +86,7 @@ public class RepoDbAppointments {
         }
         return appointmentservice;
     }
+
     public List<Appointment> getAllAutoAppointmentsbystatus(String usernameservice,String situation)
     {
         this.initialize();
