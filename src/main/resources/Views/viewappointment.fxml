@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="836.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ComboBox layoutX="245.0" layoutY="730.0" prefWidth="150.0" />
+      <DatePicker layoutX="235.0" layoutY="654.0" prefHeight="0.0" prefWidth="174.0" />
+      <Button layoutX="261.0" layoutY="776.0" mnemonicParsing="false" text="Make appointment" />
+      <Label layoutX="304.0" layoutY="618.0" text="Date" />
+      <Accordion layoutX="312.0" layoutY="98.0" />
+      <Label layoutX="304.0" layoutY="697.0" text="Time" />
+      <TextField layoutX="248.0" layoutY="297.0" />
+      <TextField layoutX="246.0" layoutY="373.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="279.0" layoutY="267.0" text="Make of the car" />
+      <Label layoutX="277.0" layoutY="341.0" text="Model of the car" />
+      <Label layoutX="258.0" layoutY="418.0" text="Year the car was made in" />
+      <TextField layoutX="248.0" layoutY="450.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="147.0" layoutY="558.0" prefHeight="47.0" prefWidth="351.0" text="Pick date and time for your appointment" textFill="#1590b2">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="298.0" layoutY="202.0" text="Full name" />
+      <Label layoutX="257.0" layoutY="139.0" text="Appointment" textFill="#1590b2">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField layoutX="250.0" layoutY="228.0" />
+      <ComboBox layoutX="246.0" layoutY="527.0" prefWidth="150.0" />
+      <Label layoutX="-6.0" prefHeight="102.0" prefWidth="640.0" style="-fx-background-color: #1590b2;" />
+      <ImageView fitHeight="102.0" fitWidth="136.0" layoutY="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@output-onlinepngtools.png" />
+         </image></ImageView>
+      <Label layoutX="264.0" layoutY="496.0" text="Type of work required" />
+      <Label layoutX="228.0" layoutY="28.0" text="Auto Repair">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="78.0" text="Choose your service today">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

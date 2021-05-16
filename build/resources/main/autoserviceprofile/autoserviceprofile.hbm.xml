@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.AutoServiceProfile"
+           table="AutoServiceProfile">
+        <id name="id" type="long" column="idServiceProfile">
+            <generator class="increment"/>
+        </id>
+        <property name="username" type="string" column="username"/>
+        <property name="description" type="string" column="description"/>
+        <property name="address" type="string" column="address"/>
+        <property name="hours" type="string" column="hours"/>
+        <property name="typeofwork" type="string" column="typeofwork"/>
+    </class>
+</hibernate-mapping>
