@@ -47,6 +47,18 @@ public class RepoDBServiceProfile {
         }
         return autoserviceProfile;
     }
+    public void updateAutoServiceProfile(AutoServiceProfile autoServiceProfile){
+        this.initialize();
+        try(Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            session.update(autoServiceProfile);
+            session.getTransaction().commit();
+            this.close();
+        }
+        catch (Exception e){
+            this.close();
+        }
+    }
     public void addAutoServiceProfile(AutoServiceProfile autoServiceProfile){
         this.initialize();
         try(Session session = sessionFactory.openSession()) {

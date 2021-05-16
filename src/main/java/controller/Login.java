@@ -43,7 +43,7 @@ public class Login {
                     Scene scene = new Scene(root);
                     Stage stage = new Stage();
                     stage.setScene(scene);
-                    stage.setTitle("Log In");
+                    stage.setTitle("Main");
                     stage.show();
 
                 } else if (abstractUser instanceof AutoService) {
@@ -56,7 +56,7 @@ public class Login {
                     Scene scene = new Scene(root);
                     Stage stage = new Stage();
                     stage.setScene(scene);
-                    stage.setTitle("Log In");
+                    stage.setTitle("Main");
                     stage.show();
                 }
             }
@@ -82,7 +82,7 @@ public class Login {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Log In");
+        stage.setTitle("Signup");
         stage.show();
 
     }

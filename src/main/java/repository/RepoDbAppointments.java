@@ -117,4 +117,16 @@ public class RepoDbAppointments {
             this.close();
         }
     }
+    public void updateAppointment(Appointment appointmentservice){
+        this.initialize();
+        try(Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            session.update(appointmentservice);
+            session.getTransaction().commit();
+            this.close();
+        }
+        catch (Exception e){
+            this.close();
+        }
+    }
 }

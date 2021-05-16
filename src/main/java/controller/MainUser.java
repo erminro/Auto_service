@@ -55,7 +55,7 @@ public class MainUser {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Log In");
+        stage.setTitle("Service");
         stage.show();
     }
 
@@ -69,7 +69,7 @@ public class MainUser {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Log In");
+        stage.setTitle("History");
         stage.show();
     }
 
@@ -83,7 +83,7 @@ public class MainUser {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Log In");
+        stage.setTitle("Pending history");
         stage.show();
 
     }
@@ -98,7 +98,7 @@ public class MainUser {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Log In");
+        stage.setTitle("Approved history");
         stage.show();
     }
 }
