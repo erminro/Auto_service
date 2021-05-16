@@ -1,6 +1,6 @@
 package repository;
 
-import domain.AutoService;
+import domain.AutoServiceProfile;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -8,10 +8,8 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.Query;
 
-import java.util.List;
 
-
-public class RepoDbAutoService {
+public class RepoDBServiceProfile {
     private SessionFactory sessionFactory;
 
     private void initialize() {
@@ -33,43 +31,27 @@ public class RepoDbAutoService {
             sessionFactory.close();
         }
     }
-    public AutoService getAutoServiceByUsername(String username){
+    public AutoServiceProfile getAutoServiceProfileByUsername(String username){
         this.initialize();
-        AutoService autoservice = null;
+        AutoServiceProfile autoserviceProfile = null;
         try(Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-            Query query = session.createQuery("from AutoService where username=:username");
+            Query query = session.createQuery("from AutoServiceProfile where username=:username");
             query.setParameter("username",username);
-            autoservice = (AutoService) query.uniqueResult();
+            autoserviceProfile = (AutoServiceProfile) query.uniqueResult();
             session.getTransaction().commit();
             this.close();
         }
         catch (Exception e){
             this.close();
         }
-        return autoservice;
+        return autoserviceProfile;
     }
-    public List<AutoService> getAllAutoService()
-    {
-        this.initialize();
-        List<AutoService> autoservice = null;
-        try(Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            Query query = session.createQuery("from AutoService");
-            autoservice = query.getResultList();
-            session.getTransaction().commit();
-            this.close();
-        }
-        catch (Exception e){
-            this.close();
-        }
-        return autoservice;
-    }
-    public void addAutoService(AutoService autoService){
+    public void addAutoServiceProfile(AutoServiceProfile autoServiceProfile){
         this.initialize();
         try(Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-            session.save(autoService);
+            session.save(autoServiceProfile);
             session.getTransaction().commit();
             this.close();
         }
@@ -77,5 +59,4 @@ public class RepoDbAutoService {
             this.close();
         }
     }
-
 }

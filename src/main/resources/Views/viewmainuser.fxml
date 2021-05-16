@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainUser">
+   <children>
+      <Label layoutX="-6.0" layoutY="-1.0" prefHeight="114.0" prefWidth="938.0" style="-fx-background-color: #1590b2;" />
+      <ImageView fitHeight="95.0" fitWidth="142.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@output-onlinepngtools.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="368.0" layoutY="26.0" text="Auto Repair">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="81.0" text="Choose your service today">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="-3.0" layoutY="113.0" prefHeight="523.0" prefWidth="287.0" style="-fx-background-color: #c2b280;" />
+      <Label layoutX="96.0" layoutY="136.0" text="Menu" textFill="#1590b2">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="-5.0" layoutY="189.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View pending appointments" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="-5.0" layoutY="273.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View history" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="-3.0" layoutY="357.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View approved appointments" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="261.0" layoutY="113.0" prefHeight="77.0" prefWidth="668.0" style="-fx-background-color: #c2b280;" />
+      <Label layoutX="444.0" layoutY="138.0" text="List Of Auto Repari Shops " textFill="#1590b2">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablemainuser" layoutX="283.0" layoutY="190.0" onMouseClicked="#mouseclickedtable" prefHeight="438.0" prefWidth="645.0">
+        <columns>
+          <TableColumn fx:id="servicenamemainuser" prefWidth="667.0" text="List" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
