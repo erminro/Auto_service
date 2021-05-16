@@ -4,11 +4,9 @@ import domain.Appointment;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import service.Service;
 
 public class Appointmentc {
@@ -59,9 +57,18 @@ public class Appointmentc {
         String fullname=this.textfullname.getText();
         String time=this.comboboxtime.getValue();
         String typeofwork=this.texttypeofworkrequired.getValue();
-        String date=this.datepickerdate.getValue().toString();
+        String date = this.datepickerdate.getValue().toString();
         String status="Pending";
-        Appointment appointment=new Appointment(userusername,this.service.getUserByUsername(usernameservice).getName(),fullname,caryear,carmake,carmodel,date,typeofwork,time,status,usernameservice);
-        this.service.addAppointment(appointment);
+        if(!carmake.equals("") && !carmodel.equals("") && !caryear.equals("") && !fullname.equals("") && !time.equals("") && !typeofwork.equals("") && !date.equals("")) {
+            Appointment appointment = new Appointment(userusername, this.service.getUserByUsername(usernameservice).getName(), fullname, caryear, carmake, carmodel, date, typeofwork, time, status, usernameservice);
+            this.service.addAppointment(appointment);
+            Stage stage=(Stage) texttypeofworkrequired.getScene().getWindow();
+            stage.close();
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Empty fields (all fields must be completed)!");
+            alert.setContentText("Empty fields (all fields must be completed!");
+            alert.showAndWait();
+        }
     }
 }

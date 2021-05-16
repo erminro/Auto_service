@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import service.Service;
 
 public class Signup {
@@ -50,6 +51,8 @@ public class Signup {
                             user = new AutoService(username, name, pass.hashCode(), type);
                         }
                         this.service.addUser(user);
+                        Stage stage=(Stage) textfieldusername.getScene().getWindow();
+                        stage.close();
                     }else{
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                         alert.setTitle("Username must have at least 3 characters!");

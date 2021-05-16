@@ -6,8 +6,8 @@ repository/RepoDbAutoService.java
  repository.RepoDbAutoService
 repository/dialect/identity/SQLiteDialectIdentityColumnSupport.java
  repository.dialect.identity.SQLiteDialectIdentityColumnSupport
-repository/RepoDBServiceProfile.java
- repository.RepoDBServiceProfile
+domain/Appointment.java
+ domain.Appointment
 domain/AbstractUser.java
  domain.AbstractUser
 repository/RepoDbUser.java
@@ -23,29 +23,37 @@ repository/dialect/SQLiteDialect.java
  repository.dialect.SQLiteDialect$SQLiteUniqueDelegate
 domain/AutoServiceProfile.java
  domain.AutoServiceProfile
-domain/Appointment.java
- domain.Appointment
-controller/Appointmentc.java
- controller.Appointmentc
-service/Service.java
- service.Service
-controller/Servicedescriptionforuser.java
- controller.Servicedescriptionforuser
-controller/Signup.java
- controller.Signup
-controller/UserHistory.java
- controller.UserHistory
-appmain/AppMain.java
- appmain.AppMain
+repository/RepoDBServiceProfile.java
+ repository.RepoDBServiceProfile
 repository/RepoDbAppointments.java
  repository.RepoDbAppointments
-controller/MainService.java
- controller.MainService
+controller/ServiceHistory.java
+ controller.ServiceHistory
+service/Service.java
+ service.Service
 controller/UserPending.java
  controller.UserPending
+controller/AppointmentServiceView.java
+ controller.AppointmentServiceView
+controller/ServiceAccepted.java
+ controller.ServiceAccepted
 controller/UserAccepted.java
  controller.UserAccepted
+controller/UserHistory.java
+ controller.UserHistory
 controller/MainUser.java
  controller.MainUser
+appmain/AppMain.java
+ appmain.AppMain
+controller/Signup.java
+ controller.Signup
+controller/ServicePending.java
+ controller.ServicePending
 controller/Login.java
  controller.Login
+controller/MainService.java
+ controller.MainService
+controller/Appointmentc.java
+ controller.Appointmentc
+controller/Servicedescriptionforuser.java
+ controller.Servicedescriptionforuser

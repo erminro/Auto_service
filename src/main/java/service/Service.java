@@ -56,4 +56,11 @@ public class Service {
             this.repoauto.addAutoService((AutoService) user);
         }
     }
+    public void updateAutoServiceProfile(AutoServiceProfile autoServiceProfile){
+        this.repoprofile.updateAutoServiceProfile(autoServiceProfile);
+    }
+    public void updateAppointment(Appointment appointment)
+    {
+        this.repoappointments.updateAppointment(appointment);
+    }
 }

@@ -52,6 +52,6 @@ public class UserAccepted {
         }
     }
     private void loadmodel1(){
-        this.model1.setAll(this.service.getAllAutoAppointmentsbyusernameandstatus(useruserusername,"Accept"));
+        this.model1.setAll(this.service.getAllAutoAppointmentsbyusernameandstatus(useruserusername,"Accepted"));
     }
 }
