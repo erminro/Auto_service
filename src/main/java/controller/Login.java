@@ -72,11 +72,6 @@ public class Login {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION, "Wrong username!");
                 alert.showAndWait();
             }
-        }else{
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Empty fields (all fields must be completed)!");
-            alert.setContentText("Empty fields (all fields must be completed!");
-            alert.showAndWait();
         }
     }
 
