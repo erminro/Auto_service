@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Appointment"
+           table="Appointments">
+        <id name="id" type="long" column="idAppointment">
+            <generator class="increment"/>
+        </id>
+        <property name="username" type="string" column="username"/>
+        <property name="fullname" type="string" column="fullName"/>
+        <property name="typeofwork" type="string" column="typeofwork"/>
+        <property name="dateofappointment" type="string" column="date"/>
+        <property name="makeofthecar" type="string" column="make"/>
+        <property name="modelofthecar" type="string" column="model"/>
+        <property name="yearofthecar" type="string" column="year"/>
+        <property name="situation" type="string" column="situation"/>
+        <property name="usernameservice" type="string" column="usernameservice"/>
+        <property name="servicename" type="string" column="servicename"/>
+        <property name="timeofappointment" type="string" column="time"/>
+    </class>
+</hibernate-mapping>
