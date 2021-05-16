@@ -34,9 +34,29 @@ public class Login {
             if(password.hashCode()==abstractUser.getHashing()) {
                 if (abstractUser instanceof User) {
                     //
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/Views/viewmainuser.fxml"));
+                    Parent root = loader.load();
+                    MainUser controllerLogIn = loader.getController();
+                    controllerLogIn.setService(this.service);
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.setTitle("Log In");
+                    stage.show();
 
                 } else if (abstractUser instanceof AutoService) {
-                    //
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/viewmainservice.fxml"));
+                    Parent root = loader.load();
+                    MainService controllerLogIn = loader.getController();
+                    controllerLogIn.Userset(username);
+                    controllerLogIn.setService(this.service);
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.setTitle("Log In");
+                    stage.show();
                 }
             }
             else{
@@ -54,7 +74,7 @@ public class Login {
 
     public void buttonsignupclicked(MouseEvent mouseEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/views/viewsingup.fxml"));
+        loader.setLocation(getClass().getResource("/Views/viewsingup.fxml"));
         Parent root = loader.load();
         Signup controllerLogIn = loader.getController();
         controllerLogIn.setService(this.service);

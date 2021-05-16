@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.AutoService"
+           table="AutoServices">
+        <id name="id" type="long" column="idEmployee">
+            <generator class="increment"/>
+        </id>
+        <property name="username" type="string" column="username"/>
+        <property name="Name" type="string" column="firstName"/>
+        <property name="hashing" type="int" column="hashing"/>
+        <property name="type" type="string" column="type"/>
+    </class>
+</hibernate-mapping>

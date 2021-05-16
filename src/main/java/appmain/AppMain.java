@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
+import repository.RepoDBServiceProfile;
 import repository.RepoDbAutoService;
 import repository.RepoDbUser;
 import service.Service;
@@ -19,7 +20,7 @@ public class AppMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try{
-            FXMLLoader loader = new FXMLLoader(AppMain.class.getResource("/views/viewlogin.fxml"));
+            FXMLLoader loader = new FXMLLoader(AppMain.class.getResource("/Views/viewlogin.fxml"));
             Parent root = loader.load();
             Login controllerLogIn = loader.getController();
             controllerLogIn.setService(getService());
@@ -39,6 +40,7 @@ public class AppMain extends Application {
     private static Service getService() {
         RepoDbUser repoDbUser = new RepoDbUser();
         RepoDbAutoService repoDbAutoService = new RepoDbAutoService();
-        return new Service(repoDbAutoService,repoDbUser);
+        RepoDBServiceProfile repoDBServiceProfile=new RepoDBServiceProfile();
+        return new Service(repoDbAutoService,repoDbUser,repoDBServiceProfile);
     }
 }

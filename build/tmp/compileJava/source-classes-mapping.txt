@@ -1,0 +1,37 @@
+domain/User.java
+ domain.User
+domain/AutoService.java
+ domain.AutoService
+repository/RepoDbAutoService.java
+ repository.RepoDbAutoService
+repository/dialect/identity/SQLiteDialectIdentityColumnSupport.java
+ repository.dialect.identity.SQLiteDialectIdentityColumnSupport
+appmain/AppMain.java
+ appmain.AppMain
+domain/AbstractUser.java
+ domain.AbstractUser
+repository/RepoDbUser.java
+ repository.RepoDbUser
+domain/Entity.java
+ domain.Entity
+repository/dialect/SQLiteDialect.java
+ repository.dialect.SQLiteDialect
+ repository.dialect.SQLiteDialect$1
+ repository.dialect.SQLiteDialect$2
+ repository.dialect.SQLiteDialect$3
+ repository.dialect.SQLiteDialect$4
+ repository.dialect.SQLiteDialect$SQLiteUniqueDelegate
+service/Service.java
+ service.Service
+domain/AutoServiceProfile.java
+ domain.AutoServiceProfile
+controller/MainUser.java
+ controller.MainUser
+controller/Login.java
+ controller.Login
+controller/MainService.java
+ controller.MainService
+controller/Signup.java
+ controller.Signup
+repository/RepoDBServiceProfile.java
+ repository.RepoDBServiceProfile
