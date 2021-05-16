@@ -11,7 +11,8 @@ public class Appointment extends Entity<Long> {
     private String situation;
     private String usernameservice;
     private String timeofappointment;
-    public Appointment(String username, String fullname, String yearofthecar, String makeofthecar, String modelofthecar, String dateofappointment, String typeofwork,String timeofappointment, String situation,String usernameservice) {
+    private String servicename;
+    public Appointment(String username,String servicename ,String fullname, String yearofthecar, String makeofthecar, String modelofthecar, String dateofappointment, String typeofwork,String timeofappointment, String situation,String usernameservice) {
         this.username = username;
         this.fullname = fullname;
         this.yearofthecar = yearofthecar;
@@ -22,7 +23,17 @@ public class Appointment extends Entity<Long> {
         this.situation = situation;
         this.usernameservice=usernameservice;
         this.timeofappointment=timeofappointment;
+        this.servicename=servicename;
     }
+
+    public String getServicename() {
+        return servicename;
+    }
+
+    public void setServicename(String servicename) {
+        this.servicename = servicename;
+    }
+
     public Appointment(){
 
     }

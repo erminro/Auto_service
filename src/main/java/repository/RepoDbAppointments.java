@@ -41,6 +41,7 @@ public class RepoDbAppointments {
         try(Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             Query query = session.createQuery("from Appointment where username=:username");
+            query.setParameter("username",username);
             appointmentservice = query.getResultList();
             session.getTransaction().commit();
             this.close();
@@ -57,6 +58,8 @@ public class RepoDbAppointments {
         try(Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             Query query = session.createQuery("from Appointment where username=:username and situation=:situation");
+            query.setParameter("username",username);
+            query.setParameter("situation",situation);
             appointmentservice = query.getResultList();
             session.getTransaction().commit();
             this.close();
@@ -73,6 +76,8 @@ public class RepoDbAppointments {
         try(Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             Query query = session.createQuery("from Appointment where usernameservice=:usernameservice and situation=:situation");
+            query.setParameter("usernameservice",usernameservice);
+            query.setParameter("situation",situation);
             appointmentservice = query.getResultList();
             session.getTransaction().commit();
             this.close();

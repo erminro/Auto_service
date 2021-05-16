@@ -61,7 +61,7 @@ public class Appointmentc {
         String typeofwork=this.texttypeofworkrequired.getValue();
         String date=this.datepickerdate.getValue().toString();
         String status="Pending";
-        Appointment appointment=new Appointment(userusername,fullname,caryear,carmake,carmodel,date,typeofwork,time,status,usernameservice);
+        Appointment appointment=new Appointment(userusername,this.service.getUserByUsername(usernameservice).getName(),fullname,caryear,carmake,carmodel,date,typeofwork,time,status,usernameservice);
         this.service.addAppointment(appointment);
     }
 }

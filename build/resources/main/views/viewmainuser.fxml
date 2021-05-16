@@ -33,17 +33,17 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="-5.0" layoutY="189.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View pending appointments" textFill="WHITE">
+      <Button layoutX="-5.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#pendingmousecliked" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View pending appointments" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="-5.0" layoutY="273.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View history" textFill="WHITE">
+      <Button layoutX="-5.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#hisorycliked" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View history" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="-3.0" layoutY="357.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View approved appointments" textFill="WHITE">
+      <Button layoutX="-3.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#approvedclicked" prefHeight="84.0" prefWidth="287.0" style="-fx-background-color: c2b280;" text="View approved appointments" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
