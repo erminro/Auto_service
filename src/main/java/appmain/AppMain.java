@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import repository.RepoDBServiceProfile;
+import repository.RepoDbAppointments;
 import repository.RepoDbAutoService;
 import repository.RepoDbUser;
 import service.Service;
@@ -41,6 +42,7 @@ public class AppMain extends Application {
         RepoDbUser repoDbUser = new RepoDbUser();
         RepoDbAutoService repoDbAutoService = new RepoDbAutoService();
         RepoDBServiceProfile repoDBServiceProfile=new RepoDBServiceProfile();
-        return new Service(repoDbAutoService,repoDbUser,repoDBServiceProfile);
+        RepoDbAppointments repoDbAppointments=new RepoDbAppointments();
+        return new Service(repoDbAutoService,repoDbUser,repoDBServiceProfile,repoDbAppointments);
     }
 }

@@ -39,6 +39,7 @@ public class Login {
                     loader.setLocation(getClass().getResource("/Views/viewmainuser.fxml"));
                     Parent root = loader.load();
                     MainUser controllerLogIn = loader.getController();
+                    controllerLogIn.UserUsername(username);
                     controllerLogIn.setService(this.service);
                     Scene scene = new Scene(root);
                     Stage stage = new Stage();

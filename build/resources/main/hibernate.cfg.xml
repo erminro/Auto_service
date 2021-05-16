@@ -19,5 +19,6 @@
         <mapping resource="user/user.hbm.xml"/>
         <mapping resource="autoservice/autoservice.hbm.xml"/>
         <mapping resource="autoserviceprofile/autoserviceprofile.hbm.xml"/>
+        <mapping resource="appointment/appointment.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,10 +1,8 @@
 package service;
 
-import domain.AbstractUser;
-import domain.AutoService;
-import domain.AutoServiceProfile;
-import domain.User;
+import domain.*;
 import repository.RepoDBServiceProfile;
+import repository.RepoDbAppointments;
 import repository.RepoDbAutoService;
 import repository.RepoDbUser;
 
@@ -14,12 +12,25 @@ public class Service {
     private RepoDbAutoService repoauto;
     private RepoDbUser repouser;
     private RepoDBServiceProfile repoprofile;
-    public Service(RepoDbAutoService repoauto, RepoDbUser repouser, RepoDBServiceProfile repoDBServiceProfile) {
+    private RepoDbAppointments repoappointments;
+    public Service(RepoDbAutoService repoauto, RepoDbUser repouser, RepoDBServiceProfile repoDBServiceProfile,RepoDbAppointments repoappointments) {
         this.repoauto = repoauto;
         this.repouser = repouser;
         this.repoprofile=repoDBServiceProfile;
+        this.repoappointments=repoappointments;
     }
-
+    public List<Appointment> getAllAutoAppointments(String username){
+        return this.repoappointments.getAllAutoAppointments(username);
+    }
+    public void addAppointment(Appointment appointment){
+        this.repoappointments.addAppointment(appointment);
+    }
+    public List<Appointment> getAllAutoAppointmentsbyusernameandstatus(String username,String status){
+        return this.repoappointments.getAllAutoAppointmentsbyusernameandstatus(username,status);
+    }
+    public List<Appointment> getAllAutoAppointmentsbystatus(String usernameservice,String status){
+        return this.repoappointments.getAllAutoAppointmentsbystatus(usernameservice,status);
+    }
     public AbstractUser getUserByUsername(String username){
         AutoService autoService = this.repoauto.getAutoServiceByUsername(username);
         User user = this.repouser.getUserByUsername(username);

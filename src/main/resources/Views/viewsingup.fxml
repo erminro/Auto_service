@@ -4,19 +4,43 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Signup">
    <children>
-      <TextField fx:id="textfieldusername" layoutX="226.0" layoutY="75.0" />
-      <TextField fx:id="textfiledname" layoutX="226.0" layoutY="133.0" />
-      <TextField fx:id="textfiledpassword" layoutX="226.0" layoutY="188.0" />
-      <ComboBox fx:id="comboboxtype" layoutX="226.0" layoutY="240.0" prefWidth="150.0" />
-      <Button fx:id="buttoncreateacocunt" layoutX="260.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#buttoncreateaccountclicked" text="Create Accocunt" />
-      <Label layoutX="148.0" layoutY="79.0" text="User" />
-      <Label layoutX="134.0" layoutY="137.0" text="Name" />
+      <TextField fx:id="textfieldusername" layoutX="228.0" layoutY="141.0" />
+      <TextField fx:id="textfiledname" layoutX="228.0" layoutY="188.0" />
+      <TextField fx:id="textfiledpassword" layoutX="228.0" layoutY="230.0" />
+      <ComboBox fx:id="comboboxtype" layoutX="227.0" layoutY="274.0" prefWidth="150.0" />
+      <Button fx:id="buttoncreateacocunt" layoutX="249.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#buttoncreateaccountclicked" text="Create Accocunt" />
+      <Label layoutX="162.0" layoutY="145.0" text="User" />
+      <Label layoutX="158.0" layoutY="192.0" text="Name" />
       <Label layoutX="134.0" layoutY="192.0" />
-      <Label layoutX="134.0" layoutY="257.0" text="type" />
-      <Label layoutX="136.0" layoutY="201.0" text="Password" />
+      <Label layoutX="161.0" layoutY="278.0" text="Type" />
+      <Label layoutX="149.0" layoutY="234.0" text="Password" />
+      <Label prefHeight="82.0" prefWidth="600.0" style="-fx-background-color: #1590b2;" />
+      <Label layoutX="223.0" layoutY="14.0" text="Auto Repair">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="51.0" text="Choose your service today">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="102.0" text="Signup" textFill="#1590b2">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="76.0" fitWidth="92.0" layoutX="25.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@output-onlinepngtools.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
