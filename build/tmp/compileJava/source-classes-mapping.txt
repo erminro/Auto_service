@@ -23,23 +23,29 @@ repository/dialect/SQLiteDialect.java
  repository.dialect.SQLiteDialect$SQLiteUniqueDelegate
 domain/AutoServiceProfile.java
  domain.AutoServiceProfile
+domain/Appointment.java
+ domain.Appointment
 controller/Appointmentc.java
  controller.Appointmentc
 service/Service.java
  service.Service
-domain/Appointment.java
- domain.Appointment
-controller/MainUser.java
- controller.MainUser
-controller/Login.java
- controller.Login
+controller/Servicedescriptionforuser.java
+ controller.Servicedescriptionforuser
+controller/Signup.java
+ controller.Signup
+controller/UserHistory.java
+ controller.UserHistory
 appmain/AppMain.java
  appmain.AppMain
 repository/RepoDbAppointments.java
  repository.RepoDbAppointments
 controller/MainService.java
  controller.MainService
-controller/Signup.java
- controller.Signup
-controller/Servicedescriptionforuser.java
- controller.Servicedescriptionforuser
+controller/UserPending.java
+ controller.UserPending
+controller/UserAccepted.java
+ controller.UserAccepted
+controller/MainUser.java
+ controller.MainUser
+controller/Login.java
+ controller.Login

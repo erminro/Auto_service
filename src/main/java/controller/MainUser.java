@@ -58,4 +58,47 @@ public class MainUser {
         stage.setTitle("Log In");
         stage.show();
     }
+
+    public void hisorycliked(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/Views/viewuserhistory.fxml"));
+        Parent root = loader.load();
+        UserHistory controllerLogIn = loader.getController();
+        controllerLogIn.Useruser(userusername);
+        controllerLogIn.setService(this.service);
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Log In");
+        stage.show();
+    }
+
+    public void pendingmousecliked(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/Views/viewpendinguser.fxml"));
+        Parent root = loader.load();
+        UserPending controllerLogIn = loader.getController();
+        controllerLogIn.Useruser(userusername);
+        controllerLogIn.setService(this.service);
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Log In");
+        stage.show();
+
+    }
+
+    public void approvedclicked(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/Views/viewuseraccepted.fxml"));
+        Parent root = loader.load();
+        UserAccepted controllerLogIn = loader.getController();
+        controllerLogIn.Useruser(userusername);
+        controllerLogIn.setService(this.service);
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Log In");
+        stage.show();
+    }
 }

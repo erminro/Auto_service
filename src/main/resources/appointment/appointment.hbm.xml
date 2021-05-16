@@ -17,5 +17,7 @@
         <property name="yearofthecar" type="string" column="year"/>
         <property name="situation" type="string" column="situation"/>
         <property name="usernameservice" type="string" column="usernameservice"/>
+        <property name="servicename" type="string" column="servicename"/>
+        <property name="timeofappointment" type="string" column="time"/>
     </class>
 </hibernate-mapping>
