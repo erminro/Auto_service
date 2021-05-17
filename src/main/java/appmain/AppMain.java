@@ -12,7 +12,6 @@ import repository.RepoDbAppointments;
 import repository.RepoDbAutoService;
 import repository.RepoDbUser;
 import service.Service;
-
 public class AppMain extends Application {
     public static void main(String[] args) {
         launch(args);
